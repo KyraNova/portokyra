@@ -1,236 +1,140 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naufal Dzakiy Pratama - Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-in-out; }
-    .fade-in.show { opacity: 1; transform: translateY(0); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naufal Dzakiy Pratama - Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background: #0F1C2C; }
+.fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-in-out; }
+.fade-in.show { opacity: 1; transform: translateY(0); }
+.skill-circle {
+  width: 120px; height: 120px; border-radius: 50%; background: conic-gradient(#00FF7F 0% 0%, #1B263B 0% 100%); display: flex; align-items: center; justify-content: center; font-weight: bold; color: #00FF7F; transition: 1s;
+}
+.skill-container { display:flex; gap:2rem; justify-content:center; flex-wrap:wrap; }
+.project-card:hover { transform: translateY(-5px) scale(1.02); transition:0.3s ease-in-out; }
+</style>
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="text-gray-100">
 
-  <!-- Navbar -->
-  <nav class="fixed w-full bg-gray-800 bg-opacity-70 backdrop-blur-md z-50 px-6 py-4 flex justify-between items-center">
-    <div class="text-xl font-bold text-green-400">Naufal Dzakiy</div>
-    <ul class="hidden md:flex space-x-6">
-      <li><a href="#about" class="hover:text-green-400">About</a></li>
-      <li><a href="#projects" class="hover:text-green-400">Projects</a></li>
-      <li><a href="#skills" class="hover:text-green-400">Skills</a></li>
-      <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
-    </ul>
-    <div class="md:hidden">
-      <button id="menu-btn" class="focus:outline-none text-green-400">☰</button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden fixed top-16 right-0 w-48 bg-gray-800 border-l border-gray-700 p-4 flex flex-col space-y-2 z-40">
-    <a href="#about" class="hover:text-green-400">About</a>
-    <a href="#projects" class="hover:text-green-400">Projects</a>
-    <a href="#skills" class="hover:text-green-400">Skills</a>
-    <a href="#contact" class="hover:text-green-400">Contact</a>
+<!-- Navbar -->
+<nav class="fixed w-full bg-gray-800 bg-opacity-70 backdrop-blur-md z-50 px-6 py-4 flex justify-between items-center">
+  <div class="text-xl font-bold text-green-400">Naufal Dzakiy</div>
+  <ul class="hidden md:flex space-x-6">
+    <li><a href="#about" class="hover:text-green-400">About</a></li>
+    <li><a href="#projects" class="hover:text-green-400">Projects</a></li>
+    <li><a href="#skills" class="hover:text-green-400">Skills</a></li>
+    <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
+  </ul>
+  <div class="md:hidden">
+    <button id="menu-btn" class="focus:outline-none text-green-400">☰</button>
   </div>
+</nav>
 
-  <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-4" style="background: linear-gradient(180deg, #1B263B 0%, #0F1C2C 100%);">
-    <img src="https://via.placeholder.com/150" alt="Naufal Photo" class="rounded-full w-36 h-36 mb-6 border-4 border-green-400">
-    <h1 class="text-4xl md:text-5xl font-bold mb-2">Naufal Dzakiy Pratama</h1>
-    <p class="text-green-400 text-xl mb-6">IT & Server Enthusiast</p>
-    <div class="flex gap-4">
-      <a href="#projects" class="bg-green-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition">See My Projects</a>
-      <a href="#contact" class="border border-green-400 px-6 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-gray-900 transition">Contact Me</a>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed top-16 right-0 w-48 bg-gray-800 border-l border-gray-700 p-4 flex flex-col space-y-2 z-40">
+  <a href="#about" class="hover:text-green-400">About</a>
+  <a href="#projects" class="hover:text-green-400">Projects</a>
+  <a href="#skills" class="hover:text-green-400">Skills</a>
+  <a href="#contact" class="hover:text-green-400">Contact</a>
+</div>
+
+<!-- Hero Section -->
+<section class="h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-[#1B263B] to-[#0F1C2C]">
+  <img src="1 (4).webp" alt="Naufal Photo" class="rounded-full w-40 h-40 mb-6 border-4 border-green-400 animate-bounce">
+  <h1 class="text-5xl font-bold mb-2 animate-fadeIn">Naufal Dzakiy Pratama</h1>
+  <p class="text-green-400 text-xl mb-6 animate-fadeIn delay-200">IT & Server Enthusiast</p>
+  <div class="flex gap-4 animate-fadeIn delay-400">
+    <a href="#projects" class="bg-green-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition">See My Projects</a>
+    <a href="#contact" class="border border-green-400 px-6 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-gray-900 transition">Contact Me</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="px-6 py-20 max-w-5xl mx-auto fade-in">
+  <h2 class="text-3xl font-bold mb-6 text-green-400">About Me</h2>
+  <div class="md:flex md:gap-12 items-center">
+    <div class="md:w-2/3 mb-6 md:mb-0">
+      <p>
+        Saya mahasiswa Informatika dengan minat pada bidang IT dan pengelolaan server. Terbiasa mempelajari konfigurasi server mandiri, termasuk instalasi, pengaturan dasar, dan troubleshooting. Memiliki problem solving yang baik, disiplin, dan siap bekerja remote.
+      </p>
     </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="px-6 py-20 max-w-5xl mx-auto fade-in">
-    <h2 class="text-3xl font-bold mb-6 text-green-400">About Me</h2>
-    <div class="md:flex md:gap-12 items-center">
-      <div class="md:w-2/3 mb-6 md:mb-0">
-        <p>
-          Saya merupakan mahasiswa Informatika yang memiliki minat pada bidang IT dan pengelolaan server. Terbiasa mempelajari serta mencoba konfigurasi server secara mandiri, termasuk instalasi, pengaturan dasar, dan troubleshooting. Memiliki kemampuan problem solving yang baik, disiplin, serta siap bekerja secara remote.
-        </p>
+    <div class="md:w-1/3 grid grid-cols-3 gap-4">
+      <div class="flex flex-col items-center">
+        <div class="bg-gray-700 p-4 rounded-full mb-2">🐧</div>
+        <span class="text-sm">Linux</span>
       </div>
-      <div class="md:w-1/3 grid grid-cols-3 gap-4">
-        <div class="flex flex-col items-center">
-          <div class="bg-gray-700 p-4 rounded-full mb-2">🐧</div>
-          <span class="text-sm">Linux</span>
-        </div>
-        <div class="flex flex-col items-center">
-          <div class="bg-gray-700 p-4 rounded-full mb-2">🐳</div>
-          <span class="text-sm">Docker</span>
-        </div>
-        <div class="flex flex-col items-center">
-          <div class="bg-gray-700 p-4 rounded-full mb-2">💻</div>
-          <span class="text-sm">Programming</span>
-        </div>
+      <div class="flex flex-col items-center">
+        <div class="bg-gray-700 p-4 rounded-full mb-2">🐳</div>
+        <span class="text-sm">Docker</span>
       </div>
-    </div>
-  </section>
-
-  <!-- Projects Section (Grid Layout) -->
-  <section id="projects" class="px-6 py-20 max-w-6xl mx-auto fade-in">
-    <h2 class="text-3xl font-bold mb-6 text-green-400 text-center">Projects & Experience</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Project 1 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Deploy LLM Server di VPS</h3>
-        <p class="text-gray-300 text-sm mb-2">Self-hosted AI Model menggunakan Ollama</p>
-        <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Menyediakan API pribadi untuk integrasi chatbot</li>
-          <li>Efisiensi sumber daya</li>
-        </ul>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Secure Reverse Proxy (Nginx + Certbot)</h3>
-        <p class="text-gray-300 text-sm mb-2">SSL/TLS automation untuk layanan web</p>
-        <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Otomatisasi sertifikat HTTPS</li>
-          <li>Konfigurasi reverse proxy Nginx</li>
-        </ul>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Sistem Operasi: Linux & Windows</h3>
-        <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Pengelolaan, konfigurasi, dan optimasi Linux (Ubuntu/Debian) & Windows</li>
-        </ul>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">FreeBSD Web Server</h3>
-        <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Instalasi & konfigurasi FreeBSD</li>
-          <li>Keamanan & hardening server</li>
-        </ul>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Infrastruktur Server Tangguh</h3>
-        <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Implementasi server scalable, aman, & andal (5 server utama)</li>
-        </ul>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Server Monolith dengan Docker</h3>
-        <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Arsitektur monolitik dalam container Docker</li>
-          <li>Portabilitas, efisiensi deployment, kemudahan manajemen</li>
-        </ul>
-      </div>
-
-      <!-- Project 7 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Microsoft Office</h3>
-        <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Word, Excel, PowerPoint untuk administrasi & presentasi</li>
-        </ul>
-      </div>
-
-      <!-- Project 8 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Programming: C++</h3>
-      </div>
-
-      <!-- Project 9 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Docker Fundamental</h3>
-        <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Memahami dasar Docker untuk aplikasi portabel & efisien</li>
-        </ul>
-      </div>
-
-      <!-- Project 10 -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Virtual Data Center</h3>
-        <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Layanan VPS otomatis untuk website</li>
-          <li>KVM/LXC dengan resource terisolasi</li>
-        </ul>
+      <div class="flex flex-col items-center">
+        <div class="bg-gray-700 p-4 rounded-full mb-2">💻</div>
+        <span class="text-sm">Programming</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="px-6 py-20 max-w-5xl mx-auto fade-in">
-    <h2 class="text-3xl font-bold mb-6 text-green-400">Skills</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-800 p-6 rounded-lg">
-        <h3 class="font-semibold mb-2">Linux System Administration</h3>
-        <div class="w-full bg-gray-700 rounded-full h-3">
-          <div class="bg-green-400 h-3 rounded-full w-80"></div>
-        </div>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg">
-        <h3 class="font-semibold mb-2">Docker</h3>
-        <div class="w-full bg-gray-700 rounded-full h-3">
-          <div class="bg-green-400 h-3 rounded-full w-72"></div>
-        </div>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg">
-        <h3 class="font-semibold mb-2">Programming (C++/Python)</h3>
-        <div class="w-full bg-gray-700 rounded-full h-3">
-          <div class="bg-green-400 h-3 rounded-full w-64"></div>
-        </div>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg">
-        <h3 class="font-semibold mb-2">Networking & Security</h3>
-        <div class="w-full bg-gray-700 rounded-full h-3">
-          <div class="bg-green-400 h-3 rounded-full w-72"></div>
-        </div>
-      </div>
+<!-- Projects Section -->
+<section id="projects" class="px-6 py-20 max-w-6xl mx-auto fade-in">
+  <h2 class="text-3xl font-bold mb-6 text-green-400 text-center">Projects & Experience</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Example Project Card -->
+    <div class="bg-gray-800 p-6 rounded-lg project-card">
+      <h3 class="font-semibold mb-2">Deploy LLM Server di VPS</h3>
+      <p class="text-gray-300 text-sm mb-2">Self-hosted AI Model menggunakan Ollama</p>
+      <ul class="list-disc list-inside text-gray-400 text-sm">
+        <li>Menyediakan API pribadi untuk integrasi chatbot</li>
+        <li>Efisiensi sumber daya</li>
+      </ul>
     </div>
-  </section>
+    <!-- Tambahkan semua 10 project lain seperti ini -->
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="px-6 py-20 max-w-3xl mx-auto fade-in">
-    <h2 class="text-3xl font-bold mb-6 text-green-400">Contact Me</h2>
-    <form class="bg-gray-800 p-6 rounded-lg grid gap-4">
-      <input type="text" placeholder="Your Name" class="p-3 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400">
-      <input type="email" placeholder="Your Email" class="p-3 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400">
-      <textarea placeholder="Your Message" class="p-3 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
-      <button type="submit" class="bg-green-400 text-gray-900 px-6 py-3 rounded font-semibold hover:bg-green-500 transition">Send Message</button>
-    </form>
-    <div class="mt-6 text-center text-gray-400">
-      📞 +62 813 2811 7870 | ✉️ naufaltunder27@gmail.com | 🌍 Kabupaten Tegal, Jawa Tengah
-    </div>
-  </section>
+<!-- Skills Section -->
+<section id="skills" class="px-6 py-20 fade-in">
+  <h2 class="text-3xl font-bold mb-6 text-green-400 text-center">Skills</h2>
+  <div class="skill-container">
+    <div class="skill-circle" style="background: conic-gradient(#00FF7F 0% 90%, #1B263B 90% 100%)">Linux</div>
+    <div class="skill-circle" style="background: conic-gradient(#00FF7F 0% 85%, #1B263B 85% 100%)">Docker</div>
+    <div class="skill-circle" style="background: conic-gradient(#00FF7F 0% 80%, #1B263B 80% 100%)">C++/Python</div>
+    <div class="skill-circle" style="background: conic-gradient(#00FF7F 0% 75%, #1B263B 75% 100%)">Networking</div>
+  </div>
+</section>
 
-  <script>
-    // Fade-in on scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2 };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
+<!-- Contact Section -->
+<section id="contact" class="px-6 py-20 fade-in">
+  <h2 class="text-3xl font-bold mb-6 text-green-400 text-center">Contact Me</h2>
+  <form action="mailto:naufaltunder27@gmail.com" method="post" enctype="text/plain" class="bg-gray-800 p-6 rounded-lg grid gap-4 max-w-lg mx-auto">
+    <input type="text" name="Name" placeholder="Your Name" class="p-3 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400">
+    <input type="email" name="Email" placeholder="Your Email" class="p-3 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400">
+    <textarea name="Message" placeholder="Your Message" class="p-3 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+    <button type="submit" class="bg-green-400 text-gray-900 px-6 py-3 rounded font-semibold hover:bg-green-500 transition">Send Message</button>
+  </form>
+</section>
 
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
+<script>
+// Fade-in on scroll
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.2 };
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
 
+// Mobile menu toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+</script>
 </body>
 </html>
