@@ -7,13 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-body{background:#1a1a2e;color:#f5f6fa;scroll-behavior:smooth;overflow-x:hidden;}
+body{background:#1a1a2e;color:#f5f6fa;scroll-behavior:smooth;}
 a{text-decoration:none;color:#f5f6fa;}
 a:hover{color:#ff9f1c;}
 nav{position:fixed;top:0;right:0;z-index:1000;background:rgba(15,52,96,0.9);padding:1rem 2rem;border-radius:8px;display:flex;gap:1rem;justify-content:flex-end;}
 nav a{font-weight:600;}
 .hero{position:relative;display:flex;justify-content:center;align-items:center;height:100vh;}
-.slider-container{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:1;}
+.slider-container{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:1;filter:blur(3px);}
 .slider-track{display:flex;transition:transform 1s ease;}
 .slider-track img{width:200px;height:250px;object-fit:cover;margin:0 8px;border-radius:8px;}
 .about-card{position:relative;z-index:2;max-width:600px;background:rgba(22,33,62,0.8);padding:2rem;border-radius:15px;text-align:center;backdrop-filter:blur(5px);}
@@ -34,7 +34,6 @@ h2{color:#ff9f1c;font-size:2rem;margin-bottom:1rem;}
 </head>
 <body>
 
-<!-- Navbar -->
 <nav>
   <a href="#about">About Me</a>
   <a href="#projects">Projects</a>
@@ -43,7 +42,6 @@ h2{color:#ff9f1c;font-size:2rem;margin-bottom:1rem;}
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- Hero -->
 <section class="hero">
   <div class="slider-container">
     <div class="slider-track" id="slider-track">
@@ -63,54 +61,55 @@ h2{color:#ff9f1c;font-size:2rem;margin-bottom:1rem;}
   </div>
 </section>
 
-<!-- Projects -->
 <section class="section" id="projects">
 <h2>Projects & Experience</h2>
-<div class="card"><h3>1. Deploy LLM Server di VPS</h3><p>Menggunakan Ollama untuk efisiensi sumber daya. Menyediakan API pribadi untuk integrasi chatbot.</p></div>
-<div class="card"><h3>2. Build Secure Reverse Proxy (Nginx + Certbot)</h3><p>Otomatisasi sertifikat HTTPS dan mengatur Nginx sebagai reverse proxy untuk layanan web.</p></div>
-<div class="card"><h3>3. Sistem Operasi: Linux & Windows</h3><p>Mengelola, mengonfigurasi, dan mengoptimalkan Linux (Ubuntu, Debian) dan Windows untuk server & desktop.</p></div>
-<div class="card"><h3>4. FreeBSD untuk Web Server</h3><p>Instalasi & konfigurasi FreeBSD, keamanan & hardening.</p></div>
-<div class="card"><h3>5. Infrastruktur Server Tangguh</h3><p>Membangun server scalable, aman, & andal dengan arsitektur 5 server utama.</p></div>
-<div class="card"><h3>6. Server Monolith dengan Docker</h3><p>Arsitektur monolitik dalam Docker container untuk portabilitas dan kemudahan manajemen.</p></div>
-<div class="card"><h3>7. Docker Fundamental</h3><p>Memahami dasar Docker untuk membangun, mengelola, dan menjalankan aplikasi container.</p></div>
-<div class="card"><h3>8. Virtual Data Center</h3><p>Layanan VPS otomatis scalable berbasis KVM atau LXC.</p></div>
+<div class="card">
+<h3>PT. Teknologi Server Indonesia (X-Code) – Student Internship (Nov 2024 – Mar 2025)</h3>
+<p>1. Deploy LLM Server di VPS (Self-hosted AI Model)<br>Menggunakan Ollama untuk efisiensi sumber daya. Menyediakan API pribadi untuk integrasi chatbot.</p>
+<p>2. Build Secure Reverse Proxy dengan Nginx + Certbot (SSL/TLS)<br>Otomatisasi sertifikat HTTPS dan konfigurasi reverse proxy.</p>
+<p>3. Sistem Operasi: Linux (Ubuntu, Debian), Windows<br>Mengelola, mengonfigurasi, dan mengoptimalkan sistem operasi untuk server dan desktop.</p>
+<p>4. FreeBSD untuk Web Server<br>Instalasi & konfigurasi FreeBSD. Keamanan & Hardening.</p>
+<p>5. Infrastruktur Server Tangguh<br>Membangun server scalable dan andal dengan 5 server utama.</p>
+<p>6. Server Monolith dengan Docker<br>Arsitektur monolitik container Docker untuk portabilitas dan efisiensi deployment.</p>
+<p>7. Microsoft Office – Word, Excel, PowerPoint.</p>
+<p>8. Programming: C++</p>
+<p>10. Docker Fundamental – membangun, mengelola, menjalankan container ringan dan portabel.</p>
+<p>11. Virtual Data Center untuk VPS otomatis – scalable berbasis KVM atau LXC.</p>
+</div>
 </section>
 
-<!-- Skills -->
 <section class="section" id="skills">
-<h2>Skills</h2>
+<h2>Hard Skills</h2>
 <ul class="skills-list">
 <li>Linux System Administration</li>
-<li>Windows & FreeBSD Administration</li>
-<li>Networking & Security</li>
-<li>Programming: C++</li>
-<li>Docker & Containerization</li>
-<li>Wordpress & Web Management</li>
+<li>C++</li>
+<li>Reverse Proxy & Security</li>
+<li>Prompt Engineering</li>
+<li>Networking</li>
 <li>Microsoft Office</li>
+<li>FreeBSD</li>
+<li>Wordpress</li>
 </ul>
 <h2>Soft Skills</h2>
 <ul class="softskills-list">
-<li>Adaptability</li>
-<li>Critical Thinking</li>
-<li>Team Collaboration</li>
-<li>Time Management</li>
-<li>Problem Solving</li>
-<li>Communication</li>
-<li>Leadership</li>
+<li>Kemampuan Beradaptasi</li>
+<li>Media Sosial Marketing</li>
+<li>Manajemen Waktu & Prioritas</li>
+<li>Berpikir Kritis</li>
+<li>Kolaborasi & Komunikasi</li>
 </ul>
+<p>Bahasa: Indonesia (Advanced), Inggris (Intermediate)</p>
 </section>
 
-<!-- Coming Soon -->
 <section class="section" id="coming">
 <h2>Coming Soon</h2>
-<div class="card"><h3>Coming Soon Project</h3><p>Project akan segera hadir di sini!</p></div>
+<div class="card"><p>Coming Soon Project</p></div>
 </section>
 
-<!-- Contact -->
 <section class="section" id="contact">
 <h2>Contact Me</h2>
 <div class="card">
-<p>Ingin menghubungi saya? Klik tombol di bawah untuk mengirim email langsung:</p>
+<p>Klik tombol di bawah untuk mengirim email langsung:</p>
 <button onclick="window.location.href='mailto:naufaltunder27@gmail.com';">Send Email</button>
 </div>
 </section>
@@ -123,7 +122,7 @@ const total = track.children.length;
 function slide() {
   index++;
   if(index >= total) index = 0;
-  const moveX = -(index * (track.children[0].offsetWidth + 16)); // margin
+  const moveX = -(index * (track.children[0].offsetWidth + 16));
   track.style.transform = `translateX(${moveX}px)`;
 }
 setInterval(slide, 3000);
