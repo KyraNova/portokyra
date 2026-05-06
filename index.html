@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Naufal Dzakiy Pratama Portfolio</title>
+<title>Naufal Dzaki Pratama Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
@@ -39,12 +39,13 @@ h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
 
 <!-- Navbar -->
 <nav>
-  <div class="logo">Naufal Dzakiy Pratama</div>
+  <div class="logo">Naufal Dzaki Pratama</div>
   <div>
     <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#coming">Coming Soon</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -55,8 +56,8 @@ h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
     <img src="https://via.placeholder.com/1600x900/16213e/ff9f1c?text=Slide+2" alt="Slide 2">
     <img src="https://via.placeholder.com/1600x900/0f3460/ff9f1c?text=Slide+3" alt="Slide 3">
   </div>
-  <div class="hero-content">
-    <h1>Naufal Dzakiy Pratama</h1>
+  <div class="hero-content" id="about">
+    <h1>Naufal Dzaki Pratama</h1>
     <p>Hai! Saya calon SysAdmin dengan pengalaman membangun server, VPS otomatis, deployment AI server, dan programming C++. Passion saya di Linux, Windows, FreeBSD, serta containerization dan web management. Saya senang memecahkan masalah, beradaptasi cepat, dan mengembangkan skill IT dan soft skill seperti leadership dan komunikasi.</p>
     <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});">View My Work</button>
   </div>
@@ -65,7 +66,6 @@ h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
 <!-- Projects & Experience -->
 <section class="section" id="projects">
   <h2>Projects & Experience</h2>
-
   <div class="card"><h3>1. Deploy LLM Server di VPS</h3><p>Menggunakan Ollama untuk efisiensi sumber daya. Menyediakan API pribadi untuk integrasi chatbot.</p></div>
   <div class="card"><h3>2. Build Secure Reverse Proxy (Nginx + Certbot)</h3><p>Otomatisasi sertifikat HTTPS dan mengatur Nginx sebagai reverse proxy untuk layanan web.</p></div>
   <div class="card"><h3>3. Sistem Operasi: Linux & Windows</h3><p>Mengelola, mengonfigurasi, dan mengoptimalkan Linux (Ubuntu, Debian) dan Windows untuk server & desktop.</p></div>
@@ -107,8 +107,17 @@ h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
   <div class="card"><h3>Coming Soon Project</h3><p>Project akan segera hadir di sini!</p></div>
 </section>
 
+<!-- Contact -->
+<section class="section" id="contact">
+  <h2>Contact Me</h2>
+  <div class="card">
+    <p>Ingin menghubungi saya? Klik tombol di bawah untuk mengirim email langsung:</p>
+    <button onclick="window.location.href='mailto:naufaltunder27@gmail.com';">Send Email</button>
+  </div>
+</section>
+
 <script>
-// Simple slider
+// Slider
 let slides = document.querySelectorAll('.slider img');
 let current = 0;
 setInterval(() => {
