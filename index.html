@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kyra Nova Portfolio</title>
+<title>Naufal Dzaki Pratama Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
@@ -13,10 +13,11 @@ a:hover { color:#ff9f1c; }
 nav { background:#0f3460; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; }
 nav .logo { font-weight:700; font-size:1.5rem; color:#ff9f1c; }
 nav a { margin-left:1.5rem; font-weight:600; }
-.hero { display:flex; flex-direction:column; align-items:center; justify-content:center; height:90vh; text-align:center; }
-.hero img { width:180px; height:180px; border-radius:50%; border:4px solid #ff9f1c; margin-bottom:1rem; object-fit:cover; }
-.hero h1 { font-size:3rem; margin-bottom:0.5rem; color:#ff9f1c; }
-.hero p { font-size:1.1rem; opacity:0.9; max-width:600px; }
+.hero { display:flex; flex-direction:column; align-items:center; justify-content:center; height:90vh; text-align:center; gap:1rem; }
+.hero img { width:180px; height:180px; border-radius:50%; border:4px solid #ff9f1c; object-fit:cover; }
+.hero h1 { font-size:3rem; color:#ff9f1c; }
+.hero .about-card { background:#16213e; padding:1.5rem; border-radius:10px; max-width:800px; box-shadow:0 4px 12px rgba(0,0,0,0.5); }
+.hero .about-card p { margin-bottom:0.5rem; }
 .section { max-width:1100px; margin:2rem auto; padding:0 1rem; }
 h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
 .card { background:#16213e; padding:1rem; border-radius:10px; margin-bottom:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.5); transition:transform 0.3s; }
@@ -24,14 +25,14 @@ h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
 .project-img { width:100%; max-height:150px; object-fit:cover; border-radius:8px; margin-bottom:0.5rem; }
 .skills-list, .softskills-list { display:flex; flex-wrap:wrap; gap:1rem; list-style:none; padding-left:0; }
 .skills-list li, .softskills-list li { background:#0f3460; padding:0.5rem 1rem; border-radius:8px; }
-@media(max-width:768px){ .hero h1{font-size:2.2rem;} .hero p{font-size:1rem;} }
+@media(max-width:768px){ .hero h1{font-size:2.2rem;} .hero .about-card{padding:1rem;} }
 </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav>
-  <div class="logo">Kyra Nova</div>
+  <div class="logo">Naufal Dzaki Pratama</div>
   <div>
     <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
@@ -42,42 +43,58 @@ h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
 
 <!-- Hero Section -->
 <section class="hero">
-  <img src="https://via.placeholder.com/180" alt="Foto Kyra Nova">
-  <h1>Kyra Nova</h1>
-  <p>Hai! Saya Naufal Dzaki Pratama, calon SysAdmin dan penggemar Linux, Windows, FreeBSD, serta teknologi server modern. Saya berpengalaman membangun infrastruktur VPS otomatis, server monolitik dengan Docker, dan deployment AI server. Selain teknis, saya senang belajar programming, kolaborasi tim, dan terus mengembangkan skill IT saya.</p>
-</section>
-
-<!-- About Me -->
-<section class="section" id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>Saya memiliki pengalaman magang di PT. Teknologi Server Indonesia (X-Code) dengan fokus pada deployment server, konfigurasi reverse proxy, keamanan, dan virtualisasi VPS. Saya senang memecahkan masalah, beradaptasi dengan cepat, dan memiliki passion dalam membangun solusi IT yang scalable dan efisien. Saya juga aktif belajar programming, automation, dan administrasi sistem untuk mendukung karier sebagai SysAdmin profesional.</p>
+  <img src="https://via.placeholder.com/180" alt="Foto Naufal Dzaki Pratama">
+  <h1>Naufal Dzaki Pratama</h1>
+  <div class="about-card">
+    <p>Hai! Saya Naufal Dzaki Pratama, calon SysAdmin dengan pengalaman membangun server, VPS otomatis, dan deployment AI server. Saya memiliki passion di Linux, Windows, FreeBSD, serta programming C++ dan teknologi containerization.</p>
+    <p>Saya senang belajar, beradaptasi dengan cepat, dan selalu mencari solusi untuk infrastruktur IT yang scalable dan aman. Selain itu, saya aktif mengembangkan soft skill seperti leadership, komunikasi, dan kolaborasi tim.</p>
   </div>
 </section>
 
-<!-- Projects -->
+<!-- Projects & Experience -->
 <section class="section" id="projects">
-  <h2>Projects</h2>
+  <h2>Projects & Experience</h2>
+
   <div class="card">
-    <img src="https://via.placeholder.com/400x150" alt="LLM Server Deployment" class="project-img">
-    <h3>LLM Server Deployment</h3>
-    <p>Menggunakan Ollama untuk efisiensi sumber daya dan menyediakan API pribadi untuk integrasi chatbot.</p>
+    <h3>1. Deploy LLM Server di VPS</h3>
+    <p>Menggunakan Ollama untuk efisiensi sumber daya. Menyediakan API pribadi untuk integrasi chatbot.</p>
   </div>
+
   <div class="card">
-    <img src="https://via.placeholder.com/400x150" alt="Secure Reverse Proxy" class="project-img">
-    <h3>Secure Reverse Proxy</h3>
-    <p>Setup Nginx + Certbot untuk HTTPS otomatis dan keamanan data layanan berbasis web.</p>
+    <h3>2. Build Secure Reverse Proxy (Nginx + Certbot)</h3>
+    <p>Otomatisasi sertifikat HTTPS untuk keamanan data. Mengatur Nginx sebagai reverse proxy untuk layanan berbasis web.</p>
   </div>
+
   <div class="card">
-    <img src="https://via.placeholder.com/400x150" alt="Docker Monolith Server" class="project-img">
-    <h3>Server Monolith dengan Docker</h3>
-    <p>Membangun arsitektur server monolitik dalam container Docker untuk efisiensi deployment.</p>
+    <h3>3. Sistem Operasi: Linux & Windows</h3>
+    <p>Pengalaman mengelola, mengonfigurasi, dan mengoptimalkan Linux (Ubuntu, Debian) dan Windows untuk server dan desktop.</p>
   </div>
+
   <div class="card">
-    <img src="https://via.placeholder.com/400x150" alt="Virtual Data Center" class="project-img">
-    <h3>Virtual Data Center</h3>
-    <p>Membangun layanan VPS otomatis yang scalable untuk kebutuhan website dan layanan cloud internal.</p>
+    <h3>4. FreeBSD untuk Web Server</h3>
+    <p>Instalasi & konfigurasi FreeBSD, keamanan & hardening untuk web server yang stabil.</p>
   </div>
+
+  <div class="card">
+    <h3>5. Infrastruktur Server Tangguh</h3>
+    <p>Membangun infrastruktur server scalable, aman, dan andal dengan arsitektur 5 server utama.</p>
+  </div>
+
+  <div class="card">
+    <h3>6. Server Monolith dengan Docker</h3>
+    <p>Mengimplementasikan arsitektur server monolitik dalam container Docker untuk portabilitas dan kemudahan manajemen layanan.</p>
+  </div>
+
+  <div class="card">
+    <h3>7. Docker Fundamental</h3>
+    <p>Memahami dasar Docker untuk membangun, mengelola, dan menjalankan aplikasi dalam container ringan dan portabel.</p>
+  </div>
+
+  <div class="card">
+    <h3>8. Virtual Data Center</h3>
+    <p>Membangun virtual data center untuk layanan VPS otomatis yang scalable berbasis KVM atau LXC.</p>
+  </div>
+
 </section>
 
 <!-- Skills -->
@@ -109,7 +126,6 @@ h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
 <section class="section" id="coming">
   <h2>Coming Soon</h2>
   <div class="card">
-    <img src="https://via.placeholder.com/400x150" alt="Coming Soon" class="project-img">
     <h3>Coming Soon Project</h3>
     <p>Project akan segera hadir di sini!</p>
   </div>
