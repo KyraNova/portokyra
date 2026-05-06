@@ -11,7 +11,6 @@
     .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-in-out; }
     .fade-in.show { opacity: 1; transform: translateY(0); }
     .animate-bounce-slow { animation: bounce 2s infinite; }
-    .animate-pulse-slow { animation: pulse 2.5s infinite; }
   </style>
 </head>
 <body class="text-gray-100">
@@ -41,7 +40,7 @@
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center px-4" style="background: linear-gradient(180deg, #1B263B 0%, #0F1C2C 100%);">
     <img src="1 (4).jpg" alt="Naufal Photo" class="rounded-full w-36 h-36 mb-6 border-4 border-green-400 animate-bounce-slow">
-    <h1 class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-slow">Naufal Dzakiy Pratama</h1>
+    <h1 class="text-4xl md:text-5xl font-bold mb-2 animate-pulse">Naufal Dzakiy Pratama</h1>
     <p class="text-green-400 text-xl mb-6">IT & Server Enthusiast</p>
     <div class="flex gap-4">
       <a href="#projects" class="bg-green-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition transform hover:scale-105">See My Projects</a>
@@ -52,34 +51,17 @@
   <!-- About Section -->
   <section id="about" class="px-6 py-20 max-w-5xl mx-auto fade-in">
     <h2 class="text-3xl font-bold mb-6 text-green-400">About Me</h2>
-    <div class="md:flex md:gap-12 items-center">
-      <div class="md:w-2/3 mb-6 md:mb-0">
-        <p>
-          Saya merupakan mahasiswa Informatika yang memiliki minat pada bidang IT dan pengelolaan server. Terbiasa mempelajari serta mencoba konfigurasi server secara mandiri, termasuk instalasi, pengaturan dasar, dan troubleshooting. Memiliki kemampuan problem solving yang baik, disiplin, serta siap bekerja secara remote.
-        </p>
-      </div>
-      <div class="md:w-1/3 grid grid-cols-3 gap-4">
-        <div class="flex flex-col items-center">
-          <div class="bg-gray-700 p-4 rounded-full mb-2">🐧</div>
-          <span class="text-sm">Linux</span>
-        </div>
-        <div class="flex flex-col items-center">
-          <div class="bg-gray-700 p-4 rounded-full mb-2">🐳</div>
-          <span class="text-sm">Docker</span>
-        </div>
-        <div class="flex flex-col items-center">
-          <div class="bg-gray-700 p-4 rounded-full mb-2">💻</div>
-          <span class="text-sm">Programming</span>
-        </div>
-      </div>
-    </div>
+    <p>
+      Mahasiswa Informatika yang memiliki minat pada bidang IT dan pengelolaan server. Terbiasa mempelajari serta mencoba konfigurasi server secara mandiri, termasuk instalasi, pengaturan dasar, dan troubleshooting. Memiliki kemampuan problem solving yang baik, disiplin, serta siap bekerja secara remote.
+    </p>
   </section>
 
-  <!-- Projects Section (grid per project) -->
+  <!-- Projects & Experience Section -->
   <section id="projects" class="px-6 py-20 max-w-6xl mx-auto fade-in">
     <h2 class="text-3xl font-bold mb-6 text-green-400 text-center">Projects & Experience</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Project 1 -->
+
+      <!-- Project Cards -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Deploy LLM Server di VPS</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
@@ -88,89 +70,101 @@
         </ul>
       </div>
 
-      <!-- Project 2 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Secure Reverse Proxy (Nginx + Certbot)</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Otomatisasi sertifikat HTTPS untuk keamanan data</li>
-          <li>Konfigurasi reverse proxy Nginx</li>
+          <li>Otomatisasi sertifikat HTTPS</li>
+          <li>Mengatur Nginx sebagai reverse proxy untuk layanan berbasis web</li>
         </ul>
       </div>
 
-      <!-- Project 3 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Sistem Operasi: Linux & Windows</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Pengelolaan, konfigurasi, dan optimasi Linux & Windows untuk server dan desktop</li>
+          <li>Mengelola, mengonfigurasi, dan mengoptimalkan sistem operasi Linux (Ubuntu/Debian) dan Windows</li>
         </ul>
       </div>
 
-      <!-- Project 4 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">FreeBSD Web Server</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
           <li>Instalasi & konfigurasi FreeBSD</li>
-          <li>Keamanan & hardening server</li>
+          <li>Keamanan & hardening</li>
         </ul>
       </div>
 
-      <!-- Project 5 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
-        <h3 class="font-semibold mb-2">Infrastruktur Server Tangguh</h3>
+        <h3 class="font-semibold mb-2">Infrastruktur Server yang Tangguh</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Server scalable, aman & andal (5 server utama)</li>
+          <li>Infrastruktur server scalable, aman, dan andal dengan 5 server utama</li>
         </ul>
       </div>
 
-      <!-- Project 6 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Server Monolith dengan Docker</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Arsitektur monolitik dalam container Docker</li>
-          <li>Portabilitas, efisiensi deployment, kemudahan manajemen</li>
+          <li>Mengimplementasikan arsitektur server monolitik di container Docker</li>
+          <li>Portabilitas dan efisiensi deployment</li>
         </ul>
       </div>
 
-      <!-- Project 7 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Microsoft Office</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Word, Excel, PowerPoint untuk administrasi & presentasi</li>
+          <li>Word, Excel, PowerPoint untuk administrasi dan presentasi profesional</li>
         </ul>
       </div>
 
-      <!-- Project 8 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Programming: C++</h3>
       </div>
 
-      <!-- Project 9 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Docker Fundamental</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Membangun, mengelola, dan menjalankan aplikasi dalam container ringan & portabel</li>
+          <li>Membangun, mengelola, dan menjalankan aplikasi dalam container</li>
         </ul>
       </div>
 
-      <!-- Project 10 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Virtual Data Center</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Layanan VPS otomatis scalable untuk website</li>
+          <li>Layanan VPS otomatis untuk website</li>
           <li>VPS berbasis KVM/LXC dengan resource terisolasi</li>
         </ul>
       </div>
+
     </div>
   </section>
 
   <!-- Skills Section -->
   <section id="skills" class="px-6 py-20 max-w-5xl mx-auto fade-in">
     <h2 class="text-3xl font-bold mb-6 text-green-400">Skills</h2>
-    <div class="grid md:grid-cols-4 gap-4">
+    <h3 class="font-semibold text-green-300 mb-2">Hard Skills</h3>
+    <div class="grid md:grid-cols-4 gap-4 mb-6">
       <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Linux System Administration</div>
-      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Docker</div>
-      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Programming (C++/Python)</div>
-      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Networking & Security</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">C++</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Reverse Proxy & Security</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Prompt Engineering</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Networking</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Microsoft Office</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">FreeBSD</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Wordpress</div>
+    </div>
+
+    <h3 class="font-semibold text-green-300 mb-2">Soft Skills</h3>
+    <div class="grid md:grid-cols-3 gap-4 mb-6">
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Kemampuan Beradaptasi</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Media Sosial Marketing</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Manajemen Waktu & Prioritas</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Berpikir Kritis</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Kolaborasi & Komunikasi</div>
+    </div>
+
+    <h3 class="font-semibold text-green-300 mb-2">Languages</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">Indonesia (Advanced)</div>
+      <div class="bg-gray-800 p-4 rounded-lg text-center hover:bg-green-400 hover:text-gray-900 transition cursor-default">English (Intermediate)</div>
     </div>
   </section>
 
@@ -189,7 +183,6 @@
   </section>
 
   <script>
-    // Fade-in on scroll
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = { threshold: 0.2 };
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
@@ -202,7 +195,6 @@
     }, appearOptions);
     faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
