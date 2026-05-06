@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyra Nova Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+body { background:#1a1a2e; color:#f5f6fa; line-height:1.6; scroll-behavior:smooth; }
+a { color:#f5f6fa; text-decoration:none; }
+a:hover { color:#ff9f1c; }
+nav { background:#0f3460; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; }
+nav .logo { font-weight:700; font-size:1.5rem; color:#ff9f1c; }
+nav a { margin-left:1.5rem; font-weight:600; }
+.hero { display:flex; flex-direction:column; align-items:center; justify-content:center; height:90vh; text-align:center; }
+.hero img { width:180px; height:180px; border-radius:50%; border:4px solid #ff9f1c; margin-bottom:1rem; object-fit:cover; }
+.hero h1 { font-size:3rem; margin-bottom:0.5rem; color:#ff9f1c; }
+.hero p { font-size:1.1rem; opacity:0.9; max-width:600px; }
+.section { max-width:1100px; margin:2rem auto; padding:0 1rem; }
+h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
+.card { background:#16213e; padding:1rem; border-radius:10px; margin-bottom:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.5); transition:transform 0.3s; }
+.card:hover { transform:translateY(-5px); }
+.project-img { width:100%; max-height:150px; object-fit:cover; border-radius:8px; margin-bottom:0.5rem; }
+.skills-list, .softskills-list { display:flex; flex-wrap:wrap; gap:1rem; list-style:none; padding-left:0; }
+.skills-list li, .softskills-list li { background:#0f3460; padding:0.5rem 1rem; border-radius:8px; }
+@media(max-width:768px){ .hero h1{font-size:2.2rem;} .hero p{font-size:1rem;} }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">Kyra Nova</div>
+  <div>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#coming">Coming Soon</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <img src="https://via.placeholder.com/180" alt="Foto Kyra Nova">
+  <h1>Kyra Nova</h1>
+  <p>Hai! Saya Naufal Dzaki Pratama, calon SysAdmin dan penggemar Linux, Windows, FreeBSD, serta teknologi server modern. Saya berpengalaman membangun infrastruktur VPS otomatis, server monolitik dengan Docker, dan deployment AI server. Selain teknis, saya senang belajar programming, kolaborasi tim, dan terus mengembangkan skill IT saya.</p>
+</section>
+
+<!-- About Me -->
+<section class="section" id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>Saya memiliki pengalaman magang di PT. Teknologi Server Indonesia (X-Code) dengan fokus pada deployment server, konfigurasi reverse proxy, keamanan, dan virtualisasi VPS. Saya senang memecahkan masalah, beradaptasi dengan cepat, dan memiliki passion dalam membangun solusi IT yang scalable dan efisien. Saya juga aktif belajar programming, automation, dan administrasi sistem untuk mendukung karier sebagai SysAdmin profesional.</p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="section" id="projects">
+  <h2>Projects</h2>
+  <div class="card">
+    <img src="https://via.placeholder.com/400x150" alt="LLM Server Deployment" class="project-img">
+    <h3>LLM Server Deployment</h3>
+    <p>Menggunakan Ollama untuk efisiensi sumber daya dan menyediakan API pribadi untuk integrasi chatbot.</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/400x150" alt="Secure Reverse Proxy" class="project-img">
+    <h3>Secure Reverse Proxy</h3>
+    <p>Setup Nginx + Certbot untuk HTTPS otomatis dan keamanan data layanan berbasis web.</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/400x150" alt="Docker Monolith Server" class="project-img">
+    <h3>Server Monolith dengan Docker</h3>
+    <p>Membangun arsitektur server monolitik dalam container Docker untuk efisiensi deployment.</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/400x150" alt="Virtual Data Center" class="project-img">
+    <h3>Virtual Data Center</h3>
+    <p>Membangun layanan VPS otomatis yang scalable untuk kebutuhan website dan layanan cloud internal.</p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="section" id="skills">
+  <h2>Skills</h2>
+  <ul class="skills-list">
+    <li>Linux System Administration</li>
+    <li>Windows & FreeBSD Administration</li>
+    <li>Networking & Security</li>
+    <li>Programming: C++</li>
+    <li>Docker & Containerization</li>
+    <li>Wordpress & Web Management</li>
+    <li>Microsoft Office</li>
+  </ul>
+
+  <h2>Soft Skills</h2>
+  <ul class="softskills-list">
+    <li>Adaptability</li>
+    <li>Critical Thinking</li>
+    <li>Team Collaboration</li>
+    <li>Time Management</li>
+    <li>Problem Solving</li>
+    <li>Communication</li>
+    <li>Leadership</li>
+  </ul>
+</section>
+
+<!-- Coming Soon -->
+<section class="section" id="coming">
+  <h2>Coming Soon</h2>
+  <div class="card">
+    <img src="https://via.placeholder.com/400x150" alt="Coming Soon" class="project-img">
+    <h3>Coming Soon Project</h3>
+    <p>Project akan segera hadir di sini!</p>
+  </div>
+</section>
+
+</body>
+</html>
