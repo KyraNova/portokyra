@@ -7,37 +7,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
-body { background:#1a1a2e; color:#f5f6fa; line-height:1.6; scroll-behavior:smooth; overflow-x:hidden; }
-a { color:#f5f6fa; text-decoration:none; }
-a:hover { color:#ff9f1c; }
+body { background:#1a1a2e; color:#f5f6fa; scroll-behavior:smooth; }
 nav { background:#0f3460; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; }
 nav .logo { font-weight:700; font-size:1.5rem; color:#ff9f1c; }
-nav a { margin-left:1.5rem; font-weight:600; }
+nav a { margin-left:1.5rem; font-weight:600; color:#f5f6fa; text-decoration:none; }
+nav a:hover { color:#ff7f00; }
 
-/* Hero + Slider */
-.hero { position:relative; display:flex; align-items:center; justify-content:center; height:90vh; text-align:center; overflow:hidden; }
-.slider { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; }
-.slider img { width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition:opacity 1s ease-in-out; }
-.slider img.active { opacity:1; }
-.hero-content { position:relative; z-index:2; max-width:800px; background:rgba(22,33,62,0.85); padding:2rem; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.5); }
-.hero-content h1 { font-size:3rem; color:#ff9f1c; margin-bottom:0.5rem; }
-.hero-content p { font-size:1.1rem; margin-bottom:1rem; }
-.hero-content button { padding:0.7rem 1.5rem; font-size:1rem; background:#ff9f1c; border:none; border-radius:5px; cursor:pointer; color:#fff; }
-.hero-content button:hover { background:#ff7f00; }
+/* Hero Section */
+.hero { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2rem; padding:3rem 1rem; }
+.about-card { background:#16213e; padding:2rem; border-radius:10px; max-width:500px; flex:1; box-shadow:0 4px 12px rgba(0,0,0,0.5); }
+.about-card h1 { color:#ff9f1c; margin-bottom:1rem; font-size:2.5rem; }
+.about-card p { margin-bottom:1rem; }
+.about-card button { padding:0.7rem 1.5rem; font-size:1rem; background:#ff9f1c; border:none; border-radius:5px; cursor:pointer; color:#fff; }
+.about-card button:hover { background:#ff7f00; }
 
-/* Section */
+/* Slider Container */
+.slider-container { flex:1; max-width:500px; overflow:hidden; border-radius:10px; }
+.slider-track { display:flex; transition: transform 1s ease; }
+.slider-track img { width:200px; height:250px; object-fit:cover; margin-right:1rem; border-radius:8px; }
+
+/* Sections */
 .section { max-width:1100px; margin:2rem auto; padding:0 1rem; }
 h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
 .card { background:#16213e; padding:1rem; border-radius:10px; margin-bottom:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.5); transition:transform 0.3s; }
 .card:hover { transform:translateY(-5px); }
 .skills-list, .softskills-list { display:flex; flex-wrap:wrap; gap:1rem; list-style:none; padding-left:0; }
 .skills-list li, .softskills-list li { background:#0f3460; padding:0.5rem 1rem; border-radius:8px; }
-@media(max-width:768px){ .hero-content h1{font-size:2.2rem;} .hero-content p{font-size:1rem;} }
+
+@media(max-width:768px){ .hero { flex-direction:column; } .slider-track img { width:150px; height:200px; } }
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
 <nav>
   <div class="logo">Naufal Dzaki Pratama</div>
   <div>
@@ -49,85 +50,39 @@ h2 { color:#ff9f1c; font-size:2rem; margin-bottom:1rem; }
   </div>
 </nav>
 
-<!-- Hero + Slider -->
 <section class="hero">
-  <div class="slider">
-    <img src="1 (1).webp" class="active" alt="Slide 1">
-    <img src="1 (2).webp" alt="Slide 2">
-    <img src="1 (3).webp" alt="Slide 3">
-    <img src="1 (4).webp" alt="Slide 3">
-    <img src="1 (5).webp" alt="Slide 3">
-    <img src="1 (6).webp" alt="Slide 3">
-  </div>
-  <div class="hero-content" id="about">
+  <!-- About Me Card -->
+  <div class="about-card" id="about">
     <h1>Naufal Dzaki Pratama</h1>
-    <p>Hai! Saya calon SysAdmin dengan pengalaman membangun server, VPS otomatis, deployment AI server, dan programming C++. Passion saya di Linux, Windows, FreeBSD, serta containerization dan web management. Saya senang memecahkan masalah, beradaptasi cepat, dan mengembangkan skill IT dan soft skill seperti leadership dan komunikasi.</p>
+    <p>Hai! Saya calon SysAdmin dengan pengalaman membangun server, VPS otomatis, deployment AI server, dan programming C++. Passion saya di Linux, Windows, FreeBSD, containerization dan web management. Saya senang memecahkan masalah, beradaptasi cepat, dan mengembangkan skill IT dan soft skill seperti leadership dan komunikasi.</p>
     <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});">View My Work</button>
   </div>
-</section>
 
-<!-- Projects & Experience -->
-<section class="section" id="projects">
-  <h2>Projects & Experience</h2>
-  <div class="card"><h3>1. Deploy LLM Server di VPS</h3><p>Menggunakan Ollama untuk efisiensi sumber daya. Menyediakan API pribadi untuk integrasi chatbot.</p></div>
-  <div class="card"><h3>2. Build Secure Reverse Proxy (Nginx + Certbot)</h3><p>Otomatisasi sertifikat HTTPS dan mengatur Nginx sebagai reverse proxy untuk layanan web.</p></div>
-  <div class="card"><h3>3. Sistem Operasi: Linux & Windows</h3><p>Mengelola, mengonfigurasi, dan mengoptimalkan Linux (Ubuntu, Debian) dan Windows untuk server & desktop.</p></div>
-  <div class="card"><h3>4. FreeBSD untuk Web Server</h3><p>Instalasi & konfigurasi FreeBSD, keamanan & hardening.</p></div>
-  <div class="card"><h3>5. Infrastruktur Server Tangguh</h3><p>Membangun server scalable, aman, & andal dengan arsitektur 5 server utama.</p></div>
-  <div class="card"><h3>6. Server Monolith dengan Docker</h3><p>Arsitektur monolitik dalam Docker container untuk portabilitas dan kemudahan manajemen.</p></div>
-  <div class="card"><h3>7. Docker Fundamental</h3><p>Memahami dasar Docker untuk membangun, mengelola, dan menjalankan aplikasi container.</p></div>
-  <div class="card"><h3>8. Virtual Data Center</h3><p>Layanan VPS otomatis scalable berbasis KVM atau LXC.</p></div>
-</section>
-
-<!-- Skills -->
-<section class="section" id="skills">
-  <h2>Skills</h2>
-  <ul class="skills-list">
-    <li>Linux System Administration</li>
-    <li>Windows & FreeBSD Administration</li>
-    <li>Networking & Security</li>
-    <li>Programming: C++</li>
-    <li>Docker & Containerization</li>
-    <li>Wordpress & Web Management</li>
-    <li>Microsoft Office</li>
-  </ul>
-
-  <h2>Soft Skills</h2>
-  <ul class="softskills-list">
-    <li>Adaptability</li>
-    <li>Critical Thinking</li>
-    <li>Team Collaboration</li>
-    <li>Time Management</li>
-    <li>Problem Solving</li>
-    <li>Communication</li>
-    <li>Leadership</li>
-  </ul>
-</section>
-
-<!-- Coming Soon -->
-<section class="section" id="coming">
-  <h2>Coming Soon</h2>
-  <div class="card"><h3>Coming Soon Project</h3><p>Project akan segera hadir di sini!</p></div>
-</section>
-
-<!-- Contact -->
-<section class="section" id="contact">
-  <h2>Contact Me</h2>
-  <div class="card">
-    <p>Ingin menghubungi saya? Klik tombol di bawah untuk mengirim email langsung:</p>
-    <button onclick="window.location.href='mailto:naufaltunder27@gmail.com';">Send Email</button>
+  <!-- Slider Horizontal -->
+  <div class="slider-container">
+    <div class="slider-track" id="slider-track">
+      <img src="1 (1).webp" alt="Slide 1">
+      <img src="1 (2).webp" alt="Slide 2">
+      <img src="1 (3).webp" alt="Slide 3">
+      <img src="1 (4).webp" alt="Slide 4">
+      <img src="1 (5).webp" alt="Slide 5">
+      <img src="1 (6).webp" alt="Slide 6">
+    </div>
   </div>
 </section>
 
+<!-- JS Slider Horizontal -->
 <script>
-// Slider
-let slides = document.querySelectorAll('.slider img');
-let current = 0;
-setInterval(() => {
-  slides[current].classList.remove('active');
-  current = (current + 1) % slides.length;
-  slides[current].classList.add('active');
-}, 4000);
+const track = document.getElementById('slider-track');
+let index = 0;
+const total = track.children.length;
+function slide() {
+  index++;
+  if(index >= total) index = 0;
+  const moveX = -(index * (track.children[0].offsetWidth + 16)); // 16px margin
+  track.style.transform = `translateX(${moveX}px)`;
+}
+setInterval(slide, 3000);
 </script>
 
 </body>
