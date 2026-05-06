@@ -11,6 +11,7 @@
     .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-in-out; }
     .fade-in.show { opacity: 1; transform: translateY(0); }
     .animate-bounce-slow { animation: bounce 2s infinite; }
+    .animate-pulse-slow { animation: pulse 2.5s infinite; }
   </style>
 </head>
 <body class="text-gray-100">
@@ -40,7 +41,7 @@
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center px-4" style="background: linear-gradient(180deg, #1B263B 0%, #0F1C2C 100%);">
     <img src="1 (4).jpg" alt="Naufal Photo" class="rounded-full w-36 h-36 mb-6 border-4 border-green-400 animate-bounce-slow">
-    <h1 class="text-4xl md:text-5xl font-bold mb-2 animate-pulse">Naufal Dzakiy Pratama</h1>
+    <h1 class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-slow">Naufal Dzakiy Pratama</h1>
     <p class="text-green-400 text-xl mb-6">IT & Server Enthusiast</p>
     <div class="flex gap-4">
       <a href="#projects" class="bg-green-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition transform hover:scale-105">See My Projects</a>
@@ -74,11 +75,11 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects Section (grid per project) -->
   <section id="projects" class="px-6 py-20 max-w-6xl mx-auto fade-in">
     <h2 class="text-3xl font-bold mb-6 text-green-400 text-center">Projects & Experience</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Repeat per project card seperti sebelumnya -->
+      <!-- Project 1 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Deploy LLM Server di VPS</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
@@ -87,27 +88,82 @@
         </ul>
       </div>
 
+      <!-- Project 2 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Secure Reverse Proxy (Nginx + Certbot)</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Otomatisasi sertifikat HTTPS</li>
+          <li>Otomatisasi sertifikat HTTPS untuk keamanan data</li>
           <li>Konfigurasi reverse proxy Nginx</li>
         </ul>
       </div>
 
-      <!-- Tambahkan semua project seperti sebelumnya... -->
-      <!-- Contoh 1 project tambahan -->
+      <!-- Project 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
+        <h3 class="font-semibold mb-2">Sistem Operasi: Linux & Windows</h3>
+        <ul class="list-disc list-inside text-gray-400 text-sm">
+          <li>Pengelolaan, konfigurasi, dan optimasi Linux & Windows untuk server dan desktop</li>
+        </ul>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
+        <h3 class="font-semibold mb-2">FreeBSD Web Server</h3>
+        <ul class="list-disc list-inside text-gray-400 text-sm">
+          <li>Instalasi & konfigurasi FreeBSD</li>
+          <li>Keamanan & hardening server</li>
+        </ul>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
+        <h3 class="font-semibold mb-2">Infrastruktur Server Tangguh</h3>
+        <ul class="list-disc list-inside text-gray-400 text-sm">
+          <li>Server scalable, aman & andal (5 server utama)</li>
+        </ul>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
+        <h3 class="font-semibold mb-2">Server Monolith dengan Docker</h3>
+        <ul class="list-disc list-inside text-gray-400 text-sm">
+          <li>Arsitektur monolitik dalam container Docker</li>
+          <li>Portabilitas, efisiensi deployment, kemudahan manajemen</li>
+        </ul>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
+        <h3 class="font-semibold mb-2">Microsoft Office</h3>
+        <ul class="list-disc list-inside text-gray-400 text-sm">
+          <li>Word, Excel, PowerPoint untuk administrasi & presentasi</li>
+        </ul>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
+        <h3 class="font-semibold mb-2">Programming: C++</h3>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
+        <h3 class="font-semibold mb-2">Docker Fundamental</h3>
+        <ul class="list-disc list-inside text-gray-400 text-sm">
+          <li>Membangun, mengelola, dan menjalankan aplikasi dalam container ringan & portabel</li>
+        </ul>
+      </div>
+
+      <!-- Project 10 -->
       <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transform transition">
         <h3 class="font-semibold mb-2">Virtual Data Center</h3>
         <ul class="list-disc list-inside text-gray-400 text-sm">
-          <li>Layanan VPS otomatis untuk website</li>
-          <li>KVM/LXC dengan resource terisolasi</li>
+          <li>Layanan VPS otomatis scalable untuk website</li>
+          <li>VPS berbasis KVM/LXC dengan resource terisolasi</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section (grid tanpa bar) -->
+  <!-- Skills Section -->
   <section id="skills" class="px-6 py-20 max-w-5xl mx-auto fade-in">
     <h2 class="text-3xl font-bold mb-6 text-green-400">Skills</h2>
     <div class="grid md:grid-cols-4 gap-4">
